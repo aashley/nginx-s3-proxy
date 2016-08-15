@@ -2,8 +2,14 @@ FROM debian:jessie
 
 WORKDIR /tmp
 
-RUN apt-get -y update
-RUN apt-get -y install curl build-essential libpcre3 libpcre3-dev zlib1g-dev libssl-dev git && \
+RUN apt-get -y update && apt-get install -y \
+        curl \
+        build-essential \
+        libpcre3 \
+        libpcre3-dev \
+        zlib1g-dev \
+        libssl-dev \
+        git && \
     curl -LO http://nginx.org/download/nginx-1.9.3.tar.gz && \
     tar zxf nginx-1.9.3.tar.gz && \
     cd nginx-1.9.3 && \
