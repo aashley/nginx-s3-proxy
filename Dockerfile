@@ -13,7 +13,7 @@ RUN apt-get -y update && apt-get install -y \
     curl -LO http://nginx.org/download/nginx-1.9.3.tar.gz && \
     tar zxf nginx-1.9.3.tar.gz && \
     cd nginx-1.9.3 && \
-    git clone -b AuthV2 https://github.com/anomalizer/ngx_aws_auth.git && \
+    git clone https://github.com/anomalizer/ngx_aws_auth.git && \
     ./configure --with-http_ssl_module --add-module=ngx_aws_auth && \
     make install && \
     cd /tmp && \
